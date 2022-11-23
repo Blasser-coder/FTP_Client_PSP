@@ -1,0 +1,33 @@
+{
+    "timestamp": [
+        1669203960,
+        1669204020,
+        1669204080,
+        1669204140,
+        1669204200
+    ],
+    "gateway": {
+        "name": "AcuLink 810 Gateway",
+        "model": "AcuLink810-X",
+        "serial": "S8P20120083"
+    },
+    "device": {
+        "name": "WM_1",
+        "model": "BadgerTFX_NetVolOnly",
+        "serial": "TFX5000-1",
+        "online": true,
+        "readings": [
+            {
+                "param": "Totalizer Net Flow",
+                "value": [
+                    "494603",
+                    "494771",
+                    "494958",
+                    "495093",
+                    "495465"
+                ],
+                "unit": "Gallons"
+            }
+        ]
+    }
+}

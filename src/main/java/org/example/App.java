@@ -34,19 +34,19 @@ public class App
                 //OPCION - 2
                 case 2:
                     if (!LogeoMenu){break;}
-                    if (ComprobacionConexionFTP()){break;}
+                    if (!ComprobacionConexionFTP()){break;}
                     Opcion2();
                     break;
                 //OPCION - 3
                 case 3:
                     if (!LogeoMenu){break;}
-                    if (ComprobacionConexionFTP()){break;}
+                    if (!ComprobacionConexionFTP()){break;}
                     Opcion3();
                     break;
                 //OPCION - 4
                 case 4:
                     if (!LogeoMenu){break;}
-                    if (ComprobacionConexionFTP()){break;}
+                    if (!ComprobacionConexionFTP()){break;}
                     Opcion4();
                     break;
                 //OPCION - 5
@@ -81,11 +81,18 @@ public class App
     }
     //OPCION - 2
     public static void Opcion2(){
+        Boolean FicheroSubido = false;
         System.out.println("Nombre del fichero que se quiere subir al servidor: ");
         String FicheroSubida = sc.next();
-        String[] FicheroSplit = FicheroSubida.split(".");
+        String[] FicheroSplit = FicheroSubida.split("/");
         try {
-            Fis = new FileInputStream("");
+            Fis = new FileInputStream(FicheroSubida);
+            FicheroSubido = Constants.FTPconnectionClient.storeFile(FicheroSplit[FicheroSplit.length - 1], Fis);
+            if (FicheroSubido) {
+                System.out.println("Fcihero subido con exito al servidor");
+            }else{
+                System.out.println("Subida del fichero fallido");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,9 +102,9 @@ public class App
     public static void Opcion3(){
         System.out.println("Nombre del fichero que se quiere descargar: ");
         String FicheroDesccarga = sc.next();
-        String[] FicheroSplit = FicheroDesccarga.split(".");
+        String[] FicheroSplit = FicheroDesccarga.split("\\.");
         try{
-            Fos = new FileOutputStream(FicheroSplit[0] + "." + "_LocalFile" + "." + FicheroSplit[1]);
+            Fos = new FileOutputStream(System.getProperty("user.dir") + "/" +FicheroSplit[0] + "_LocalFile" + "." + FicheroSplit[1]);
             Constants.FTPconnectionClient.retrieveFile(FicheroDesccarga, Fos);
         } catch (IOException e) {
             e.printStackTrace();
