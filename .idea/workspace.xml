@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Initial Commit">
+    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Practica Acabada (Posible Ampliacion)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
@@ -74,7 +74,12 @@
       <workItem from="1668683180013" duration="2858000" />
       <workItem from="1668754532162" duration="37000" />
       <workItem from="1669017549317" duration="3209000" />
-      <workItem from="1669203422003" duration="1304000" />
+      <workItem from="1669203422003" duration="1344000" />
+      <workItem from="1669281543736" duration="371000" />
+      <workItem from="1669291420473" duration="1204000" />
+      <workItem from="1669363190527" duration="4000" />
+      <workItem from="1669363648822" duration="5000" />
+      <workItem from="1669622312940" duration="3791000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1668602440728</created>
@@ -90,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669020738239</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Practica Acabada (Posible Ampliacion)">
+      <created>1669204749829</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669204749829</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Practica Acabada (Posible Ampliacion)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica Acabada (Posible Ampliacion)" />
   </component>
 </project>
