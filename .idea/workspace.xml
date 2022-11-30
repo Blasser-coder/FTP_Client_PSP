@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Practica Acabada (Posible Ampliacion)">
+    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
@@ -79,7 +79,9 @@
       <workItem from="1669291420473" duration="1204000" />
       <workItem from="1669363190527" duration="4000" />
       <workItem from="1669363648822" duration="5000" />
-      <workItem from="1669622312940" duration="3791000" />
+      <workItem from="1669622312940" duration="4433000" />
+      <workItem from="1669634703944" duration="5000" />
+      <workItem from="1669801838588" duration="958000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1668602440728</created>
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669204749829</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)">
+      <created>1669626139836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669626139836</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Practica Acabada (Posible Ampliacion)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Practica Acabada (Posible Ampliacion)" />
+    <MESSAGE value="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)" />
   </component>
 </project>

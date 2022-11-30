@@ -52,12 +52,12 @@ public class App
                         break;
                     //OPCION - 6
                     case 6:
+                        if (!LogeoMenu){break;}
+                        if (!ComprobacionConexionFTP()){break;}
                         Opcion6();
                         break;
                     //OPCION - 7
                     case 7:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
                         Opcion7();
                         break;
                     //OPCION - 8
@@ -133,19 +133,6 @@ public class App
 
     //OPCION - 4
     private static void Opcion4(){
-        try{
-            FTPFile[] Files = Constants.FTPconnectionClient.listFiles();
-            String WorkingDirectory = Constants.FTPconnectionClient.printWorkingDirectory();
-            System.out.println("<---------- Current Working Directory: '"+ WorkingDirectory + "' --------->");
-            for (FTPFile f : Files) {
-                System.out.println( f.toFormattedString());
-            }
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-    //OPCION - 5
-    private static void Opcion5(){
         boolean iterator = true;
         String PathFile = "";
         while (iterator){
@@ -170,8 +157,39 @@ public class App
             System.out.println("No se ha podido borrar el fichero...");
         }
     }
+    //OPCION - 5
+    private static void Opcion5(){
+        try{
+            FTPFile[] Files = Constants.FTPconnectionClient.listFiles();
+            String WorkingDirectory = Constants.FTPconnectionClient.printWorkingDirectory();
+            System.out.println("<---------- Current Working Directory: '"+ WorkingDirectory + "' --------->");
+            for (FTPFile f : Files) {
+                System.out.println( f.toFormattedString());
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
     //OPCION - 6
     private static void Opcion6(){
+        String PathName = "";
+        Boolean iterator = true;
+        Boolean DirectoryChanged = false;
+        try{
+            System.out.println("Dime el nombre del directorio al que quiere cambiarse");
+            PathName = sc.next();
+            DirectoryChanged = Constants.FTPconnectionClient.changeWorkingDirectory(PathName);
+            if(DirectoryChanged){
+                System.out.println("Directorio Cambiado Satisfactoriamente...");
+            }else{
+                System.out.println("No se ha podido cambiar de directorio, intentelo de nuevo...");
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    //OPCION - 7
+    private static void Opcion7(){
         if(LogeoMenu){
             try {
                 Constants.FTPconnectionClient.disconnect();
@@ -183,32 +201,6 @@ public class App
             System.out.println("No se ha iniciado sesion en ningun servidor FTP");
         }
         LogeoMenu = Constants.FTPconnectionClient.isConnected();
-    }
-    //OPCION - 7
-    private static void Opcion7(){
-        String PathName = "";
-        Boolean iterator = true;
-        Boolean DirectoryChanged = false;
-        try{
-            while(iterator){
-                System.out.println("Dime el nombre del directorio al que quiere cambiarse");
-                PathName = sc.next();
-                File f = new File(PathName);
-                if (!f.exists()){
-                    System.out.println("El directorio no se ha encontrado vuelve a intentarlo");
-                }else{
-                    iterator = false;
-                }
-            }
-            DirectoryChanged = Constants.FTPconnectionClient.changeWorkingDirectory(PathName);
-            if(DirectoryChanged){
-                System.out.println("Directorio Cambiado Satisfactoriamente...");
-            }else{
-                System.out.println("No se ha podido cambiar de directorio, intentelo de nuevo...");
-            }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
     }
 
 
@@ -237,10 +229,10 @@ public class App
         if (LogeoMenu) {
             System.out.println("2. Subida de Archivo/s al servidor FTP");
             System.out.println("3. Descarga de Archivo/s al servidor FTP");
-            System.out.println("4. Mostrar el arbol de directorios del servidor FTP");
-            System.out.println("5. Eliminar carpeta/fichero del servidor");
-            System.out.println("6. Deslogeo del servidor FTP");
-            System.out.println("7. Cambiar de directorio de trabajo");
+            System.out.println("4. Eliminar carpeta/fichero del servidor");
+            System.out.println("5. Mostrar el arbol de directorios del servidor FTP");
+            System.out.println("6. Cambiar de directorio de trabajo");
+            System.out.println("7. Deslogeo del servidor FTP");
         }
         System.out.println("8. Salir");
         System.out.println("<---------Fin de Menu-------->");
