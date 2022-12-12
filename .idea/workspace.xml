@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)">
+    <list default="true" id="af273672-cfa9-415b-8333-7a767ff1561e" name="Changes" comment="Practica Acabada (Ya no hay mas)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
@@ -81,7 +81,13 @@
       <workItem from="1669363648822" duration="5000" />
       <workItem from="1669622312940" duration="4433000" />
       <workItem from="1669634703944" duration="5000" />
-      <workItem from="1669801838588" duration="958000" />
+      <workItem from="1669801838588" duration="1721000" />
+      <workItem from="1669806682062" duration="1852000" />
+      <workItem from="1669810027370" duration="11000" />
+      <workItem from="1669896858283" duration="1888000" />
+      <workItem from="1669968061564" duration="19000" />
+      <workItem from="1669979968383" duration="1982000" />
+      <workItem from="1670832155735" duration="579000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1668602440728</created>
@@ -111,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669626139836</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Practica Acabada (Ya no hay mas)">
+      <created>1669802812595</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669802812595</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +145,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Practica Acabada (Posible Ampliacion)" />
     <MESSAGE value="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Practica Acabada (Ya no hay mas ampliaciones falta funcionalidad)" />
+    <MESSAGE value="Practica Acabada (Ya no hay mas)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica Acabada (Ya no hay mas)" />
   </component>
 </project>

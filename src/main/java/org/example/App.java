@@ -4,6 +4,7 @@ import org.w3c.dom.xpath.XPathNamespace;
 
 import java.io.*;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App 
@@ -21,49 +22,45 @@ public class App
                 Menu();
                 System.out.println("Dime una upcion del menu: ");
                 int Opcion = sc.nextInt();
-                switch (Opcion){
+                switch (Opcion) {
                     //OPCION - 1
-                    case 1:
-                        Opcion1();
-                        break;
+                    case 1 -> Opcion1();
+
                     //OPCION - 2
-                    case 2:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
+                    case 2 -> {
+                        if (!LogeoMenu) { break; }
+                        if (!ComprobacionConexionFTP()) { break; }
                         Opcion2();
-                        break;
+                    }
                     //OPCION - 3
-                    case 3:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
+                    case 3 -> {
+                        if (!LogeoMenu) { break; }
+                        if (!ComprobacionConexionFTP()) { break; }
                         Opcion3();
-                        break;
+                    }
                     //OPCION - 4
-                    case 4:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
+                    case 4 -> {
+                        if (!LogeoMenu) { break; }
+                        if (!ComprobacionConexionFTP()) { break; }
                         Opcion4();
-                        break;
+                    }
                     //OPCION - 5
-                    case 5:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
+                    case 5 -> {
+                        if (!LogeoMenu) { break; }
+                        if (!ComprobacionConexionFTP()) { break; }
                         Opcion5();
-                        break;
+                    }
                     //OPCION - 6
-                    case 6:
-                        if (!LogeoMenu){break;}
-                        if (!ComprobacionConexionFTP()){break;}
+                    case 6 -> {
+                        if (!LogeoMenu) { break; }
+                        if (!ComprobacionConexionFTP()) { break; }
                         Opcion6();
-                        break;
+                    }
                     //OPCION - 7
-                    case 7:
-                        Opcion7();
-                        break;
+                    case 7 -> Opcion7();
+
                     //OPCION - 8
-                    case 8:
-                        Iterador = false;
-                        break;
+                    case 8 -> Iterador = false;
                 }
             } catch(IOException e){
                 e.printStackTrace();
@@ -173,7 +170,6 @@ public class App
     //OPCION - 6
     private static void Opcion6(){
         String PathName = "";
-        Boolean iterator = true;
         Boolean DirectoryChanged = false;
         try{
             System.out.println("Dime el nombre del directorio al que quiere cambiarse");
